@@ -16,10 +16,12 @@ public class GameManager : MonoBehaviour
 
     GameObject gameOverPanel;
     GameObject congratsPanel;
+    GameObject pausePanel;
 
-    int  deathCount   = 0;
-    int  currentLevel = 1;
-    bool isDead       = false;
+    int deathCount = 0;
+    int currentLevel = 1;
+    bool isDead = false;
+    bool isPaused = false;
 
     void Awake()
     {
@@ -28,6 +30,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
         Instance = this;
         DontDestroyOnLoad(gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -38,29 +41,73 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    void Update()
     {
-        isDead        = false;
-        gameOverPanel = null;
-        congratsPanel = null; 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            // Don't pause if Game Over or Congrats panel is open
+            if ((gameOverPanel != null && gameOverPanel.activeSelf) ||
+                (congratsPanel != null && congratsPanel.activeSelf))
+                return;
+
+            if (isPaused)
+                ResumeGame();
+            else
+                PauseGame();
+        }
     }
 
-    public void RegisterPanels(GameObject overPanel, GameObject congrats)
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Time.timeScale = 1f;
+
+        isDead = false;
+        isPaused = false;
+
+        gameOverPanel = null;
+        congratsPanel = null;
+        pausePanel = null;
+    }
+
+    public void RegisterPanels(GameObject overPanel, GameObject congrats, GameObject pause)
     {
         gameOverPanel = overPanel;
         congratsPanel = congrats;
+        pausePanel = pause;
 
-        // Always start hidden
         SetPanel(gameOverPanel, false);
         SetPanel(congratsPanel, false);
+        SetPanel(pausePanel, false);
+
+        Time.timeScale = 1f;
+        isPaused = false;
+    }
+
+    public void PauseGame()
+    {
+        if (pausePanel == null) return;
+
+        SetPanel(pausePanel, true);
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    public void ResumeGame()
+    {
+        if (pausePanel == null) return;
+
+        SetPanel(pausePanel, false);
+        Time.timeScale = 1f;
+        isPaused = false;
     }
 
     public void PlayerDied()
     {
         if (isDead) return;
-        isDead = true;
 
+        isDead = true;
         deathCount++;
+
         PlaySFX(gameOverSFX);
         SetPanel(gameOverPanel, true);
     }
@@ -84,26 +131,32 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public int  GetDeathCount()  => deathCount;
+    public int GetDeathCount() => deathCount;
+
     public void PlayClickSFX()
     {
         if (clickSFX != null)
             AudioSource.PlayClipAtPoint(clickSFX, Camera.main.transform.position);
     }
+
     public void OnRestartButtonClicked()
     {
-        if (clickSFX != null)
-            AudioSource.PlayClipAtPoint(clickSFX, Camera.main.transform.position);
+        PlayClickSFX();
 
-        Invoke("RestartFromLevel1", 0.2f);
+        Time.timeScale = 1f;
+        isPaused = false;
+
+        Invoke(nameof(RestartFromLevel1), 0.2f);
     }
 
     public void OnMenuButtonClicked()
     {
-        if (clickSFX != null)
-            AudioSource.PlayClipAtPoint(clickSFX, Camera.main.transform.position);
+        PlayClickSFX();
 
-        Invoke("LoadMenu", 0.2f);
+        Time.timeScale = 1f;
+        isPaused = false;
+
+        Invoke(nameof(LoadMenu), 0.2f);
     }
 
     void LoadMenu()
@@ -130,6 +183,6 @@ public class GameManager : MonoBehaviour
         if (panel != null)
             panel.SetActive(active);
         else
-            Debug.LogWarning("[GameManager] Panel is null — did you add UIPanelRegistry to this scene and assign the panels?");
+            Debug.LogWarning("[GameManager] Panel is null — did you register all panels?");
     }
 }

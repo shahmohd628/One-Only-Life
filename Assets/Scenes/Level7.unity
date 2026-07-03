@@ -265,6 +265,10 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 7883176092849453090, guid: f89b62d0d46c4f841b55408196b9c121, type: 3}
+      propertyPath: totalLevels
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883176092849453090, guid: f89b62d0d46c4f841b55408196b9c121, type: 3}
       propertyPath: congratsPanel
       value: 
       objectReference: {fileID: 0}
