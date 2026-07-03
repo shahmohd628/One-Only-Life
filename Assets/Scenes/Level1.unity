@@ -469,6 +469,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ef66cdf83697d54eb2622a6931c18d4, type: 3}
+--- !u!114 &643649584 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2656593581844423056, guid: 2ef66cdf83697d54eb2622a6931c18d4, type: 3}
+  m_PrefabInstance: {fileID: 643649583}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &670419738 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7272912682566142205, guid: 2ef66cdf83697d54eb2622a6931c18d4, type: 3}
@@ -1010,6 +1021,10 @@ PrefabInstance:
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 670419738}
+    - target: {fileID: 7883176092849453090, guid: f89b62d0d46c4f841b55408196b9c121, type: 3}
+      propertyPath: levelNameText
+      value: 
+      objectReference: {fileID: 643649584}
     - target: {fileID: 7883176092849453090, guid: f89b62d0d46c4f841b55408196b9c121, type: 3}
       propertyPath: deathCounterText
       value: 

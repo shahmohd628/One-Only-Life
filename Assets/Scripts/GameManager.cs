@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -13,6 +14,7 @@ public class GameManager : MonoBehaviour
     public AudioClip gameOverSFX;
     public AudioClip levelCompleteSFX;
     public AudioClip clickSFX;
+    public TMP_Text levelNameText;
 
     GameObject gameOverPanel;
     GameObject congratsPanel;
@@ -67,6 +69,13 @@ public class GameManager : MonoBehaviour
         gameOverPanel = null;
         congratsPanel = null;
         pausePanel = null;
+
+        levelNameText = GameObject.Find("LevelNameText")?.GetComponent<TMP_Text>();
+
+        if(levelNameText != null)
+        {
+            levelNameText.text = "level " + scene.name.Replace("Level", "");
+        }
     }
 
     public void RegisterPanels(GameObject overPanel, GameObject congrats, GameObject pause)

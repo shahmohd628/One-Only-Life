@@ -45,11 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7f205d747ac764394a74c9a503b26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  totalLevels: 6
+  totalLevels: 7
   audioSource: {fileID: 1840201902115698504}
   gameOverSFX: {fileID: 8300000, guid: aa13e74bbc4a63a4a83d123fd0a8b805, type: 3}
   levelCompleteSFX: {fileID: 8300000, guid: cb9aa23d4230feb46a3fa71059ecca79, type: 3}
   clickSFX: {fileID: 8300000, guid: 2e52a3e19c99c6b40a94da2c084d92e0, type: 3}
+  levelNameText: {fileID: 0}
 --- !u!82 &1840201902115698504
 AudioSource:
   m_ObjectHideFlags: 0

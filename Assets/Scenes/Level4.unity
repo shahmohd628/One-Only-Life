@@ -177,6 +177,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7883176092849453090, guid: f89b62d0d46c4f841b55408196b9c121, type: 3}
+      propertyPath: levelNameText
+      value: 
+      objectReference: {fileID: 1935399785}
+    - target: {fileID: 7883176092849453090, guid: f89b62d0d46c4f841b55408196b9c121, type: 3}
       propertyPath: deathCounterText
       value: 
       objectReference: {fileID: 0}
@@ -1190,6 +1194,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7272912682566142205, guid: 2ef66cdf83697d54eb2622a6931c18d4, type: 3}
   m_PrefabInstance: {fileID: 1935399783}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1935399785 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2656593581844423056, guid: 2ef66cdf83697d54eb2622a6931c18d4, type: 3}
+  m_PrefabInstance: {fileID: 1935399783}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2017642284
 PrefabInstance:
   m_ObjectHideFlags: 0
