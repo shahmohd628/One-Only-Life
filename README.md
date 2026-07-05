@@ -45,10 +45,8 @@ The project focuses on responsive player controls, engaging level design, and de
 # ✨ Features
 
 - 🎮 Responsive 2D Platforming
-- 🎭 Unique Role Swap Mechanic
 - ⚠️ Trap-Based Level Design
 - 🧩 Puzzle-Oriented Gameplay
-- 🚩 Checkpoint System
 - ❤️ One Life Challenge
 - 🎨 Custom UI & Menus
 - 🎵 Background Music & Sound Effects
@@ -67,9 +65,7 @@ The project focuses on responsive player controls, engaging level design, and de
 
 ### 🧩 Gameplay
 
-- Role Swap mechanic
 - Trap interactions
-- Puzzle progression
 - Level completion
 - One-life gameplay design
 
