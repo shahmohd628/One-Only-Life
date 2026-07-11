@@ -1,4 +1,4 @@
-# 🎭 One & Only Life
+# One & Only Life
 
 <p align="center">
 
@@ -13,12 +13,12 @@
 A <b>2D puzzle platformer</b> inspired by <b>Level Devil</b>, featuring deceptive traps and falling platforms which <b>challenges players to rethink every level</b>
 </p>
 
-> **🎮 Original Project**  
+> ** Original Project**  
 > **One & Only Life** was developed during a local game jam as an original project. Inspired by the unpredictable gameplay of **Level Devil**, I designed and implemented my own mechanics, gameplay systems, and levels to create a challenging puzzle-platforming experience.
 
 ---
 
-# 📖 Overview
+# Overview
 
 **One & Only Life** is a 2D puzzle platformer where players must navigate through trap-filled levels while adapting to unexpected obstacles and gameplay twists.
 
@@ -26,7 +26,7 @@ The project focuses on responsive player controls, engaging level design, and de
 
 ---
 
-# 📸 Screenshots
+# Screenshots
 
 <p align="center">
     <img src="Screenshots/MainMenu.png" width="450">
@@ -42,20 +42,20 @@ The project focuses on responsive player controls, engaging level design, and de
 
 ---
 
-# ✨ Features
+# Features
 
-- 🎮 Responsive 2D Platforming
-- ⚠️ Trap-Based Level Design
-- 🧩 Puzzle-Oriented Gameplay
-- ❤️ One Life Challenge
-- 🎨 Custom UI & Menus
-- 🎵 Background Music & Sound Effects
+-  Responsive 2D Platforming
+-  Trap-Based Level Design
+-  Puzzle-Oriented Gameplay
+-  One Life Challenge
+-  Custom UI & Menus
+-  Sound Effects
 
 ---
 
-# 🎯 Gameplay Systems
+# Gameplay Systems
 
-### 🎮 Player
+### Player
 
 - Responsive movement
 - Jump mechanics
@@ -63,13 +63,13 @@ The project focuses on responsive player controls, engaging level design, and de
 - Checkpoint system
 - Death & respawn
 
-### 🧩 Gameplay
+### Gameplay
 
 - Trap interactions
 - Level completion
 - One-life gameplay design
 
-### 🎨 User Interface
+### User Interface
 
 - Main Menu
 - Pause Menu
@@ -78,7 +78,7 @@ The project focuses on responsive player controls, engaging level design, and de
 
 ---
 
-# 🛠️ Technologies Used
+# Technologies Used
 
 | Category | Technologies |
 |----------|--------------|
@@ -90,7 +90,7 @@ The project focuses on responsive player controls, engaging level design, and de
 
 ---
 
-# 🎮 Controls
+# Controls
 
 | Action | Key |
 |--------|-----|
@@ -100,19 +100,18 @@ The project focuses on responsive player controls, engaging level design, and de
 
 ---
 
-# 📚 What I Learned
+# What I Learned
 
 - Designing engaging gameplay mechanics
 - 2D character controller implementation
 - Puzzle and level design
-- Checkpoint & respawn systems
+- Respawn systems
 - UI design and menu creation
-- Managing game states
 - Writing modular C# gameplay code
 
 ---
 
-# 🚀 Future Improvements
+# Future Improvements
 
 - Additional levels
 - More trap variations
@@ -123,22 +122,7 @@ The project focuses on responsive player controls, engaging level design, and de
 
 ---
 
-# 📂 Project Structure
-
-```text
-Assets
-│
-├── Prefabs
-└── Scenes
-├── Scripts
-├── SFX
-├── Sprites
-├── UI
-```
-
----
-
-# 👨‍💻 My Role
+# My Role
 
 This project was developed entirely by me during a local game jam.
 
@@ -156,5 +140,5 @@ This project was developed entirely by me during a local game jam.
 ---
 
 <p align="center">
-⭐ If you found this project interesting, consider giving it a star!
+ If you found this project interesting, consider giving it a star!
 </p>
